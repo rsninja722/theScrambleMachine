@@ -10,16 +10,16 @@ class Machine {
         this.stateStack = [];
     }
 
-    // LOWER_LEVEL | move lever to row below
-    LOWER_LEVEL() {
+    // LOWER_LEVER | move lever to row below
+    LOWER_LEVER() {
         this.lever++;
         if (this.rows.length < this.lever + 1) {
             addRow();
         }
     }
 
-    // RAISE_LEVEL | move lever to row above
-    RAISE_LEVEL() {
+    // RAISE_LEVER | move lever to row above
+    RAISE_LEVER() {
         if (this.lever > 0) {
             this.lever--;
         }
