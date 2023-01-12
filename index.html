@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>the scramble machine</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>The 2AC3 Scramble Machine</h2>
+    <br><br>
+    <table>
+        <tr>
+            <td style="border-right: 1px solid #1e4976;">
+                <h3>controls</h3>
+                <button onclick="LOOP()">start execution (LOOP)</button>
+                <button onclick="pause()">pause</button>
+                <button onclick="iterate()">iterate</button>
+                <button onclick="resetAll()">reset all</button><br>
+                <input type="range" min="0" max="984" value="500" oninput="setSpeed(this.value)"><span id="speed">speed: 2 ins/sec</span>
+                <h3>instructions</h3>
+                <button onclick="undo()">undo</button><br>
+                <button onclick="addInstruction('LOWER_LEVEL')">LOWER_LEVEL</button>
+                <button onclick="addInstruction('RAISE_LEVEL')">RAISE_LEVEL</button><br>
+                <button onclick="addInstruction('CHECK_EMPTY')">CHECK_EMPTY</button>
+                <button onclick="addInstruction('RESET_BALLS')">RESET_BALLS</button><br>
+                <button onclick="addInstruction('SCRAMBLE_DOWN')">SCRAMBLE_DOWN</button>
+                <button onclick="addInstruction('SCRAMBLE_UP')">SCRAMBLE_UP</button><br>
+                <button onclick="addInstruction('RETURN_FALSE_IF_MEM_FALSE')">RETURN_FALSE_IF_MEM_FALSE</button>
+                <button onclick="addInstruction('RETURN_TRUE_IF_MEM_FALSE')">RETURN_TRUE_IF_MEM_FALSE</button><br>
+                <button onclick="addInstruction('RETURN_FALSE_IF_MEM_TRUE')">RETURN_FALSE_IF_MEM_TRUE</button>
+                <button onclick="addInstruction('RETURN_TRUE_IF_MEM_TRUE')">RETURN_TRUE_IF_MEM_TRUE</button><br>
+                <textarea id="instructions"></textarea>
+            </td>
+            <td>
+                <h3>machine</h3>
+                <div class="interface">
+                    <button onclick="addRow()">add row</button>
+                    <button onclick="subtractRow()">subtract row</button><br>
+                    <span id="running">ins > </span><br>
+                    <span id="MEM">MEM > false</span><br>
+                    <span id="res">res > </span><br>
+                    <div id="rows"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+    
+
+    <script src="main.js"></script>
+</body>
+
+</html>

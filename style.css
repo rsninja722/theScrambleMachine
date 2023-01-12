@@ -1,0 +1,66 @@
+html {
+    color: #c7d6ff;
+    line-height: normal;
+    background-color: #090f16;
+    font-family: Helvetica,Arial,sans-serif;
+    letter-spacing: normal;
+    word-spacing: norma;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: #6d86ff;
+}
+
+td {
+    vertical-align: top;
+}
+
+button {
+    color: #6df4d0;
+    background-color: #001e3c;
+    border: 1px solid #1e4976;
+    border-radius: 2px;
+    margin: 5px;
+    padding: 3px 10px 3px 10px;
+    box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 40%), 0px 2px 2px 0px rgb(0 0 0 / 30%), 0px 1px 5px 0px rgb(0 0 0 / 25%);
+    user-select: none;
+}
+
+button:hover {
+    background-color: #073058;
+}
+
+button:active {
+    background-color: #004c99;
+}
+
+textarea {
+    background-color: #05080c;
+    border: 1px solid #1e4976;
+    border-top-color: #2b5a8d;
+    border-bottom-color: #163b63;
+    border-radius: 2px;
+    color: #c7d6ff;
+    margin: 2px;
+    width: 17em;
+    height: 30em;
+}
+
+input[type=number] {
+    background-color: #05080c;
+    border: 1px solid #1e4976;
+    border-top-color: #2b5a8d;
+    border-bottom-color: #163b63;
+    border-radius: 2px;
+    color: #c7d6ff;
+}
+
+.row-balls {
+    margin-left: 1em;
+    padding-left: 0.5em;
+    border-left: 2px solid;
+}
+
+#running, #MEM, #res {
+    font-family: consolas, monospace;
+}
