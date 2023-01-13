@@ -8,6 +8,7 @@ class Machine {
         this.speed = 500;
         this.running = false;
         this.stateStack = [];
+        this.animate = true;
     }
 
     // LOWER_LEVER | move lever to row below
@@ -62,7 +63,9 @@ class Machine {
                 this.rows[toMove]--;
                 this.rows[toMove + 1]++;
 
-                this.stateStack.push([...machine.rows]);
+                if(machine.animate) {
+                    this.stateStack.push([...machine.rows]);
+                }
 
                 this.MEM = true;
             }
@@ -93,7 +96,10 @@ class Machine {
                 this.rows[toMove]--;
                 this.rows[toMove - 1]++;
 
-                this.stateStack.push([...machine.rows]);
+                if(machine.animate) {
+                    this.stateStack.push([...machine.rows]);
+                }
+
                 this.MEM = true;
             }
         }
@@ -284,6 +290,11 @@ function resetAll() {
     document.getElementById("res").innerText = "res > ";
     addRow();
     writeRows();
+}
+
+function toggleAnimation() {
+    machine.animate = !machine.animate;
+    document.getElementById("animateButton").innerText = machine.animate ? "disable animation" : "enable animation";
 }
 
 addRow();
