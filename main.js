@@ -281,6 +281,7 @@ function resetAll() {
     document.getElementById("instructions").value = "";
     document.getElementById("rows").innerHTML = "";
     document.getElementById("running").innerText = "ins > ";
+    document.getElementById("res").innerText = "res > ";
     addRow();
     writeRows();
 }
